@@ -1,181 +1,175 @@
+-- Load required modules
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
-
+-- Create the main window
 local Window = Fluent:CreateWindow({
-Title = "ULTRON v《1》BY proton I.N.T.L",
-SubTitle = "by luascript",
-TabWidth = 160,
-Size = UDim2.fromOffset(580, 460),
-Acrylic = true,
-Theme = "Dark",
-MinimizeKey = Enum.KeyCode.L -- Changed MinimizeKey to Left Control
+    Title = "ULTRON [v1.1 ] I.N.T.L 1.0",
+    SubTitle = "by luascript",
+    TabWidth = 260,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.L -- Changed MinimizeKey to Left Control
 })
 
-
+-- Define tabs
 local Tabs = {
-Main = Window:AddTab({ Title = "Main", Icon = "home" }),
-Credits = Window:AddTab({ Title = "Credits", Icon = "apple" }),
-Misc = Window:AddTab({ Title = "misc", Icon = "check-circle" })
+    Main = Window:AddTab({ Title = "Main", Icon = "home" }),
+    Credits = Window:AddTab({ Title = "Credits", Icon = "apple" }),
+    Misc = Window:AddTab({ Title = "misc", Icon = "check-circle" })
 }
 
-
+-- Fluent options
 local Options = Fluent.Options
 
-
+-- Notification
 Fluent:Notify({
-Title = "Ultron-",
-Content = "Successfully Loaded The proton 1  enjoy",
-SubContent = "MINIMIZE: PRESS 'L'",
-Duration = nil -- Changed Duration to nil
+    Title = "Ultron-",
+    Content = "Successfully Loaded The proton 1  enjoy",
+    SubContent = "MINIMIZE: PRESS 'L'",
+    Duration = nil -- Changed Duration to nil
 })
 
+-- Add buttons to the Main tab
+Tabs.Main:AddButton({
+    Title = "PROTN 16 OLD",
+    Description = "IF YOU DON'T LIKE THIS THEN ENJOY OUR OLD FEATURE",
+    Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Kyke785/16keys/main/16pro"))()
+    end
+})
 
 Tabs.Main:AddButton({
-Title = "PROTN 16 OLD",
-Description = "IF YOU DON'T LIKE THIS THEN ENJOY OUR OLD FEATURE",
-Callback = function()
-loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Kyke785/16keys/main/16pro"))()
-end
+    Title = "ESP SCRIPT ALL",
+    Description = "THIS HILIGHTS ALL PLAYER LOL",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
+    end
 })
-
 
 Tabs.Main:AddButton({
-Title = "ESP SCRIPT ALL",
-Description = "THIS HILIGHTS ALL PLAYER LOL",
-Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
-end
+    Title = "AIM BOT",
+    Description = "AIM BOT FOR FPS GAMES",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zzerexx/scripts/main/UniversalAimbotUI.lua"))()
+    end
 })
-
 
 Tabs.Main:AddButton({
-Title = "AIM BOT",
-Description = "AIM BOT FOR FPS GAMES",
-Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/zzerexx/scripts/main/UniversalAimbotUI.lua"))()
-end
+    Title = "BDOL HUB FOR BLADE BALL",
+    Description = "AUTOALL",
+    Callback = function()
+        _G.UI_Size = 200 -- config ui size
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+    end
 })
-
 
 Tabs.Main:AddButton({
-Title = "BDOL HUB FOR BLADE BALL",
-Description = "AUTOALL",
-Callback = function()
---[[
-WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-_G.UI_Size = 200 -- config ui size
-loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
-end
+    Title = "bed wars",
+    Description = "nil",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+    end
 })
-
 
 Tabs.Main:AddButton({
-Title = "bed wars",
-Description = "nil",
-Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
-end
+    Title = "icehub Brookhaven",
+    Description = "nil",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+    end
 })
-
-
-Tabs.Main:AddButton({
-Title = "icehub Brookhaven",
-Description = "nil",
-Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
-end
-})
-
 
 Tabs.Main:AddSlider("Slider", {
-Title = "Walk speed slider [PATCHED IT CUZ IT'S BANNING AND KICKING]",
-Description = "This can control your Walk speed W",
-Default = 2,
-Min = 0,
-Max = 100,
-Rounding = 1,
-Callback = function(Value)
-print("PATCHED NOT WORKING CUZ IT'S KICKING AND BANNING")
-end
+    Title = "Walk speed slider [PATCHED IT CUZ IT'S BANNING AND KICKING]",
+    Description = "This can control your Walk speed W",
+    Default = 2,
+    Min = 0,
+    Max = 100,
+    Rounding = 1,
+    Callback = function(Value)
+        print("PATCHED NOT WORKING CUZ IT'S KICKING AND BANNING")
+    end
 })
 
+-- Add content to the Credits tab
+Tabs.Credits:AddParagraph({
+    Title = "Creator Info",
+    Content = "This GUI IS MADE BY luascripts / subscribe on youtube = @luascr"
+})
 
 Tabs.Credits:AddParagraph({
-Title = "Creator Info",
-Content = "This GUI IS MADE BY luascripts / subscribe on youtube = @luascr"
+    Title = "Ui lib",
+    Content = "UI MADE BY FLUENT"
 })
 
+Tabs.Credits:AddParagraph({
+    Title = "THANK YOU DARKZ TEAM",
+    Content = "SPECIALTHANKS TO DARKZ TEAM FOR UPLOADING THE SCRIPT TO ROBLOX"
+})
+
+-- Add buttons to the Misc tab
+Tabs.Misc:AddButton({
+    Title = "fly gui",
+    Description = "FLY WOTH THIS OP SCRIPT",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro69Yes/sussy-Script/main/SecuredFlyGuiv3.lua'))()
+    end
+})
 
 Tabs.Misc:AddButton({
-Title = "fly gui",
-Description = "FLY WOTH THIS OP SCRIPT",
-Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Pro69Yes/sussy-Script/main/SecuredFlyGuiv3.lua'))()
-end
+    Title = "Mbile keyboard",
+    Description = "Mobile Users only",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+    end
 })
 
-
-Tabs.Credits:AddParagraph({
-Title = "Ui lib",
-Content = "UI MADE BY FLUENT"
+Tabs.Misc:AddButton({
+    Title = "GAMEPASS SCRIPT",
+    Description = "You have to be luck or it will not work",
+    Callback = function()
+        if game.CreatorType == Enum.CreatorType.User then
+            game.Players.LocalPlayer.UserId = game.CreatorId
+        end
+        if game.CreatorType == Enum.CreatorType.Group then
+            game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
+        end
+    end
 })
-
-
-Tabs.Credits:AddParagraph({
-Title = "THANK YOU DARKZ TEAM",
-Content = "SPECIALTHANKS TO DARKZ TEAM FOR UPLOADING THE SCRIPT TO ROBLOX"
-})
-
-
-
 
 Tabs.Main:AddButton({
-Title = "BLOX FRUITS ",
-Description = "Blox Fruit",
-Callback = function()
-getgenv().WaterMark = true loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()end
+    Title = "BLOX FRUITS ",
+    Description = "Blox Fruit",
+    Callback = function()
+        getgenv().WaterMark = true 
+        loadstring(game:HttpGet("https://gitlab.com/L1ZOT/mango-hub/-/raw/main/Mango-Bloxf-Fruits-Beta"))()
+    end
 })
 
-
-
-
-Tabs.Misc:AddButton({
-Title = "Mbile keyboard",
-Description = "Mobile Users only",
-Callback = function()
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
-end
-})
-
-
-
-
-Tabs.Misc:AddButton({
-Title = "GAMEPASS SCRIPT",
-Description = "You have to be luck or it will not work",
-Callback = function()
-
-
-if game.CreatorType == Enum.CreatorType.User then
-
-
-game.Players.LocalPlayer.UserId = game.CreatorId
-
-
-end
-
-
-if game.CreatorType == Enum.CreatorType.Group then
-
-
-game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
-
-
-end
-end
+Tabs.Main:AddButton({
+    Title = "chat bypasser",
+    Description = "Very important button",
+    Callback = function()
+        Window:Dialog({
+            Title = "Chat bypasser",
+            Content = "This is a chat bypasserand many not work on some games",
+            Buttons = {
+                {
+                    Title = "Confirm",
+                    Callback = function()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))()
+                    end
+                },
+                {
+                    Title = "Cancel",
+                    Callback = function()
+                        setclipboard("CANCELLED")
+                    end
+                }
+            }
+        })
+    end
 })
