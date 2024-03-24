@@ -184,3 +184,29 @@ Tabs.Main:AddButton({
         })
     end
 })
+
+Tabs.Main:AddButton({
+    Title = "mimic",
+    Description = "Byfron BYPASS ✔️",
+    Callback = function()
+        Window:Dialog({
+            Title = "mimic bypasseD",
+            Content = "This Not working for Hunt event of doors",
+            Buttons = {
+                {
+                    Title = "Confirm",
+                    Callback = function()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Yumiara/Main/main/niam.lua"))()
+
+                   end
+                },
+                {
+                    Title = "Cancel",
+                    Callback = function()
+                        setclipboard("CANCELLED")
+                    end
+                }
+            }
+        })
+    end
+})
