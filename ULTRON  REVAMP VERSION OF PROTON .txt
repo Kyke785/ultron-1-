@@ -1,25 +1,83 @@
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/shit-lib/src.lua"))()
 
+
+
+
+
+
+
 --[[
+
+
 
 UI LIBBBBBBB BY @luascr search in youtube @luascr
 
+
+
 made by @luascr on youtube and join discord - https://discord.com/invite/t7Azc46PWy
 
+
+
 features coming soon:
+
 sliders
+
 keybinds
+
 color pickers
+
 notification
+
+
+
 
 
 sorry i rushed this in a few hours lol
 
 
 
+
+
+
+
 ]]
 
+
+
 local win = lib:Create("ULTRON V1.3","UNIVERSAL PRO")
+
 local a = win:tab("MAIN",true)
 
-a:label("SCRIPTIS DOWN PLEASEWAIT UNTIL I UPDATE")
+a:label("PRO VERSION only for lublic and private xd")
+
+a:label("SUBSCRIBE TO @luascr")
+
+a:label("my friend eshaanopn thanks For testing")
+
+a:label("Updated version")
+
+a:button("strongest battlegrounds",function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/gitroblox2023/chillscriptX/main/77_9HO6H2PR80MG.lua'))()
+end)
+
+
+
+a:button("Mimic",function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/NCaKSm3N"))()
+end)
+
+a:button("SOCCER BATTLEGROUND",function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dk4Q/Dk4QHub/master/Loader", true))()
+end)
+
+a:button("icehub",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+end)
+
+a:button("blade ball",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/SourceLua/main/Blade_Ball.lua"))()
+end)
+
+a:button("prison life admin",function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/h17s3/TIGERADMIN/main/TIGERADMINSCRIPTFREE'),true))()
+end)
